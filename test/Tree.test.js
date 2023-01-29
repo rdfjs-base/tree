@@ -39,6 +39,10 @@ describe('Tree', () => {
         objects: [{
           term: ''
         }, {
+          term: ''
+        }, {
+          term: '""'
+        }, {
           term: '"a"'
         }, {
           term: '"b"'
@@ -47,15 +51,18 @@ describe('Tree', () => {
         }],
         subjects: [{
           items: '',
+          lists: '',
           predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
           term: ''
         }, {
           items: '"a" "b"',
+          lists: '',
           predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
           term: ''
         }, {
           items: '',
-          predicates: '<http://example.org/propertyC> <http://example.org/propertyD>',
+          lists: '<http://example.org/propertyC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>,<http://example.org/propertyD> _:',
+          predicates: '<http://example.org/propertyA> <http://example.org/propertyB> <http://example.org/propertyC> <http://example.org/propertyD>',
           term: '<http://example.org/resource>'
         }]
       }
@@ -72,6 +79,7 @@ describe('Tree', () => {
         }],
         subjects: [{
           items: '',
+          lists: '',
           predicates: '<http://example.org/propertyA>',
           term: '<http://example.org/resource>'
         }]
@@ -87,6 +95,7 @@ describe('Tree', () => {
         }],
         subjects: [{
           items: '',
+          lists: '',
           predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>',
           term: '<http://example.org/resource>'
         }]

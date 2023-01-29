@@ -53,14 +53,6 @@ describe('Node', () => {
     })
   })
 
-  describe('.isListRoot', () => {
-    it('should be a property with the value false', () => {
-      const node = new Node()
-
-      strictEqual(node.isListRoot, false)
-    })
-  })
-
   describe('.isSubject', () => {
     it('should be a property with the value false', () => {
       const node = new Node()
