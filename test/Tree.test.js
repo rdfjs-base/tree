@@ -41,28 +41,57 @@ describe('Tree', () => {
         }, {
           term: ''
         }, {
+          term: ''
+        }, {
+          term: ''
+        }, {
           term: '""'
         }, {
           term: '"a"'
         }, {
           term: '"b"'
         }, {
+          term: '"c"'
+        }, {
+          term: '"d"'
+        }, {
           term: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>'
         }],
         subjects: [{
+          isListValue: true,
+          items: '',
+          lists: '',
+          predicates: '<http://example.org/propertyF>',
+          term: ''
+        }, {
+          isListValue: false,
           items: '',
           lists: '',
           predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
           term: ''
         }, {
+          isListValue: false,
+          items: '',
+          lists: '',
+          predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
+          term: ''
+        }, {
+          isListValue: false,
           items: '"a" "b"',
           lists: '',
           predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
           term: ''
         }, {
+          isListValue: false,
+          items: '"c" ',
+          lists: '',
+          predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>',
+          term: ''
+        }, {
+          isListValue: false,
           items: '',
-          lists: '<http://example.org/propertyC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>,<http://example.org/propertyD> _:',
-          predicates: '<http://example.org/propertyA> <http://example.org/propertyB> <http://example.org/propertyC> <http://example.org/propertyD>',
+          lists: '<http://example.org/propertyC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>,<http://example.org/propertyD> _:,<http://example.org/propertyE> _:',
+          predicates: '<http://example.org/propertyA> <http://example.org/propertyB> <http://example.org/propertyC> <http://example.org/propertyD> <http://example.org/propertyE>',
           term: '<http://example.org/resource>'
         }]
       }
@@ -78,6 +107,7 @@ describe('Tree', () => {
           term: '"b"'
         }],
         subjects: [{
+          isListValue: false,
           items: '',
           lists: '',
           predicates: '<http://example.org/propertyA>',
@@ -94,6 +124,7 @@ describe('Tree', () => {
           term: '<http://example.org/Resource>'
         }],
         subjects: [{
+          isListValue: false,
           items: '',
           lists: '',
           predicates: '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>',

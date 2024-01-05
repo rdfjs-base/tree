@@ -40,7 +40,8 @@ function treeToJson (tree) {
           .filter(p => p.lists.size)
           .map(p => `${termString(p.term)} ${termSetToString(p.lists)}`)
           .join(','),
-        items: (subject.items || []).map(node => termString(node.item.term)).join(' ')
+        items: (subject.items || []).map(node => termString(node.item.term)).join(' '),
+        isListValue: subject.isListValue
       }
     })
     .sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b)))
