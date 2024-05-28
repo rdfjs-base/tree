@@ -33,6 +33,6 @@
     "mocha": "^10.2.0",
     "rdf-utils-fs": "^3.0.0",
     "stream-chunks": "^1.0.0",
-    "stricter-standard": "^0.2.0"
+    "stricter-standard": "^0.3.1"
   }
 }
