@@ -28,7 +28,7 @@
     "@rdfjs/term-set": "^2.0.1"
   },
   "devDependencies": {
-    "@rdfjs/to-ntriples": "^2.0.0",
+    "@rdfjs/to-ntriples": "^3.0.1",
     "c8": "^9.1.0",
     "mocha": "^10.2.0",
     "rdf-utils-fs": "^2.3.0",
